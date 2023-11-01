@@ -1,5 +1,18 @@
 import { useState } from "react";
 import Link from "next/link";
+import "../styles/header.css";
+import "../styles/hero.css";
+import "../styles/about.css";
+import "../styles/expertise.css";
+import "../styles/contact.css";
+import "../styles/partners.css";
+import "../styles/feedback.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBuilding,
+  faChartLine,
+  faAward,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [language, setLanguage] = useState("ru"); // Default language set to English
@@ -18,7 +31,11 @@ export default function Home() {
           <span>Phone: +123-456-7890</span>
           <button>Заказать звонок</button>
         </div>
-        <select onChange={handleLanguageChange} value={language}>
+        <select
+          className="language-dropdown"
+          onChange={handleLanguageChange}
+          value={language}
+        >
           <option value="ru">Русский</option>
           <option value="en">English</option>
           <option value="kz">Казахский</option>
@@ -27,7 +44,10 @@ export default function Home() {
       </header>
       <section id="hero">
         <div className="hero-content">
-          <h2>Welcome to Our Company</h2>
+          <h2>
+            Общественный фонд
+            <br /> «Центр торгово-экономических стратегий»
+          </h2>
           <p>
             Providing top-notch trading and economic strategies for success.
           </p>
@@ -35,101 +55,145 @@ export default function Home() {
         </div>
         <img src="/hero.png" alt="Hero Image" className="hero-bg" />
       </section>
-      <section id="about" className="light-section">
-        <div className="section-content">
-          <div className="frame">
-            <h2>О нашей компании</h2>
-            <div className="about-intro">
-              <p>
-                Основанная в 1998 году, Центр торгово-экономических стратегий
-                имеет миссию обеспечивать наших клиентов наилучшими торговыми и
-                экономическими стратегиями для достижения успеха на глобальном
-                рынке.
-              </p>
-            </div>
-            <div className="about-details">
-              <h3>Наши достижения</h3>
-              <ul>
-                <li>
-                  <span className="icon">&#9733; </span> Партнерство с ведущими
-                  финансовыми учреждениями
-                </li>
-                <li>
-                  <span className="icon">&#9733; </span> Развитие стратегических
-                  планов для более чем 500 компаний
-                </li>
-                <li>
-                  <span className="icon">&#9733;</span> Награды за инновационные
-                  экономические решения
-                </li>
-              </ul>
-            </div>
+      <section id="about" className="about-section">
+        <div className="about-section-content">
+          <h2>Общественный фонд «Центр торгово-экономических стратегий»</h2>
+          <div className="about-intro">
+            <p>
+              Основанная в 1998 году, Центр торгово-экономических стратегий
+              имеет миссию обеспечивать наших клиентов наилучшими торговыми и
+              экономическими стратегиями для достижения успеха на глобальном
+              рынке.
+            </p>
           </div>
-        </div>
-      </section>
-      <section id="expertise" className="dark-section">
-        <div className="section-content">
-          <h2>Области экспертизы</h2>
-          <div className="expertise-grid">
-            <div className="expertise-card">
-              <h3>Финансовые стратегии</h3>
-              <p>Описание экспертизы в области финансовых стратегий.</p>
+          <div className="about-details">
+            <div className="detail">
+              <span className="icon">
+                <FontAwesomeIcon icon={faBuilding} />
+              </span>
+              <h3>Партнерство с ведущими финансовыми учреждениями</h3>
             </div>
-            <div className="expertise-card">
-              <h3>Глобальная торговля</h3>
-              <p>Описание экспертизы в области глобальной торговли.</p>
+            <div className="detail">
+              <span className="icon">
+                <FontAwesomeIcon icon={faChartLine} />
+              </span>
+              <h3>Развитие стратегических планов для более чем 500 компаний</h3>
             </div>
-            <div className="expertise-card">
-              <h3>Инновационные решения</h3>
-              <p>Описание экспертизы в области инновационных решений.</p>
-            </div>
-            <div className="expertise-card">
-              <h3>Консультационные услуги</h3>
-              <p>Описание экспертизы в области консультационных услуг.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contacts" className="contact-section">
-        <div className="section-content">
-          <div className="contact-card">
-            <div className="card-header">
-              <h3>Центр торгово-экономических стратегий</h3>
-              <span>Ваш надежный партнер в бизнесе</span>
-            </div>
-            <div className="card-body">
-              <p>
-                <span className="icon">&#127968;</span> г. Алматы, ул. Абая 150,
-                оф. 205
-              </p>
-              <p>
-                <span className="icon">&#128222;</span> +7 (727) 123-4567
-              </p>
-              <p>
-                <span className="icon">&#9993;</span> info@example.com
-              </p>
-              <p>
-                <span className="icon">&#128197;</span> Пн-Пт, 09:00 - 18:00
-              </p>
+            <div className="detail">
+              <span className="icon">
+                <FontAwesomeIcon icon={faAward} />
+              </span>
+              <h3>Награды за инновационные экономические решения</h3>
             </div>
           </div>
         </div>
       </section>
       <section id="partners">
-        <h2>Партнеры</h2>
-        <p>Details about partners...</p>
+        <div className="partners-section-content">
+          <h2>Наши Партнеры</h2>
+          <div className="partner-grid">
+            <div className="partner-logo">
+              <img
+                src="https://via.placeholder.com/100x100?text=Logo1"
+                alt="Partner 1 Logo"
+              />
+            </div>
+            <div className="partner-logo">
+              <img
+                src="https://via.placeholder.com/100x100?text=Logo2"
+                alt="Partner 2 Logo"
+              />
+            </div>
+            <div className="partner-logo">
+              <img
+                src="https://via.placeholder.com/100x100?text=Logo3"
+                alt="Partner 3 Logo"
+              />
+            </div>
+            <div className="partner-logo">
+              <img
+                src="https://via.placeholder.com/100x100?text=Logo4"
+                alt="Partner 4 Logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="expertise" className="expertise-section">
+        <div className="expertise-section-content">
+          <h2>Области экспертизы</h2>
+          <div className="expertise-grid">
+            <div className="expertise-card">
+              <h3>Стратегическое Планирование</h3>
+              <ul>
+                <li>Комплексный анализ компании</li>
+                <li>Разработка стратегического плана</li>
+                <li>Мониторинг и корректировка стратегии</li>
+              </ul>
+            </div>
+            <div className="expertise-card">
+              <h3>Финансовые Стратегии</h3>
+              <ul>
+                <li>Оценка финансового состояния</li>
+                <li>Разработка финансовых моделей</li>
+                <li>Управление финансовыми рисками</li>
+              </ul>
+            </div>
+            <div className="expertise-card">
+              <h3>Глобальная Торговля</h3>
+              <ul>
+                <li>Исследование рынка</li>
+                <li>Разработка экспортно-импортных стратегий</li>
+                <li>Поиск партнеров и переговоры</li>
+              </ul>
+            </div>
+            <div className="expertise-card">
+              <h3>Инновационные Решения</h3>
+              <ul>
+                <li>Мониторинг технологических трендов</li>
+                <li>Разработка и внедрение инновационных решений</li>
+                <li>Консультации по цифровой трансформации</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="feedback">
-        <h2>Форма обратной связи</h2>
-        <form>
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <textarea placeholder="Your Feedback"></textarea>
-          <button type="submit">Submit</button>
-        </form>
+        <div className="feedback-container">
+          <h2>Форма обратной связи</h2>
+          <form className="feedback-form">
+            <div className="input-group">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" placeholder="Ваше имя" />
+            </div>
+            <div className="input-group">
+              <label for="email">Ваш Email</label>
+              <input type="email" id="email" placeholder="email@example.com" />
+            </div>
+            <div className="input-group">
+              <label for="feedback-text">Ваш отзыв</label>
+              <textarea
+                id="feedback-text"
+                placeholder="Напишите ваш отзыв здесь..."
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-button">
+              Отправить
+            </button>
+          </form>
+        </div>
       </section>
-      <footer>
-        <p>&copy; 2023 Company Name</p>
+      <footer id="contacts" className="contact-section">
+        <div className="contact-section-content">
+          <div className="contact-card-container">
+            <div className="contact-card-info">
+              <p>Address: Your Address Here</p>
+              <p>Phone: +123 456 7890</p>
+              <p>Email: email@example.com</p>
+            </div>
+            <div className="contact-card-form"></div>
+          </div>
+        </div>
       </footer>
     </div>
   );

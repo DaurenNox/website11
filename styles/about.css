@@ -1,0 +1,68 @@
+#about {
+  padding: 60px 5%;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-section-content {
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 3.2em;
+  letter-spacing: 1.2px;
+  color: #002f6c; /* Dark Blue */
+}
+
+.about-intro p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.4em;
+}
+
+.about-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.icon {
+  display: block; /* Since we're placing them at the top, block works */
+  font-size: 3em; /* Adjust for bigger icons */
+  color: #0051ba;
+  margin-bottom: 20px; /* Spacing between the icon and the text */
+  text-align: center; /* Center the icon */
+}
+
+.detail {
+  display: flex;
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center content */
+  font-size: 1em;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f4f4f4; /* Light gray background */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  width: 25%; /* Adjust for equal width */
+  text-align: center; /* Center text */
+}
+
+.detail h3 {
+  margin-top: 10px; /* Space between icon and heading */
+}
+
+@media (max-width: 768px) {
+  .about-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .detail {
+    width: 100%; /* Full width on smaller screens */
+  }
+}

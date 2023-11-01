@@ -13,10 +13,9 @@ section#hero {
   position: relative;
   text-align: center;
   z-index: 2;
-  animation: fadeInUp 1s forwards 0.5s; /* New text animation */
+  animation: fadeInUp 1s forwards 0.5s;
 }
 
-/* New keyframes for text animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -38,21 +37,57 @@ section#hero {
   z-index: 1;
 }
 
+p {
+  font-size: 1.5em;
+}
+
 .hero-cta {
-  margin-top: 30px; /* Adjusted margin */
-  padding: 15px 30px; /* Increased padding */
+  margin-top: 30px;
+  padding: 15px 30px;
   background-color: #002f6c;
   color: white;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s; /* Adjusted transition */
+  transition: all 0.3s;
   font-weight: 600;
-  letter-spacing: 1px; /* Adjusted letter spacing */
-  font-size: 1.1em; /* Increased font size */
+  letter-spacing: 1px;
+  font-size: 1.1em;
 }
 
 .hero-cta:hover {
-  transform: translateY(-5px); /* Added vertical movement on hover */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Added shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptations for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  p {
+    font-size: 1.2em;
+  }
+
+  .hero-cta {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+/* Adaptations for Mobile Phones */
+@media (max-width: 480px) {
+  section#hero {
+    height: 100vh;
+  }
+
+  .hero-content h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .hero-cta {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
 }

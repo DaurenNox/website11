@@ -44,10 +44,7 @@ export default function Home() {
       </header>
       <section id="hero">
         <div className="hero-content">
-          <h2>
-            Общественный фонд
-            <br /> «Центр торгово-экономических стратегий»
-          </h2>
+          <h2>«Центр торгово-экономических стратегий»</h2>
           <p>
             Providing top-notch trading and economic strategies for success.
           </p>
@@ -57,7 +54,7 @@ export default function Home() {
       </section>
       <section id="about" className="about-section">
         <div className="about-section-content">
-          <h2>Общественный фонд «Центр торгово-экономических стратегий»</h2>
+          <h2>Про компанию</h2>
           <div className="about-intro">
             <p>
               Основанная в 1998 году, Центр торгово-экономических стратегий

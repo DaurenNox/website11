@@ -85,6 +85,7 @@ textarea {
   }
   .submit-button {
     background: white;
+    color: black;
   }
 }
 
@@ -105,6 +106,7 @@ textarea {
   .submit-button {
     font-size: 1em; /* Smaller button font */
     background: white;
+    color: black;
   }
 }
 
@@ -128,6 +130,7 @@ textarea {
 
   .submit-button {
     background: white;
+    color: black;
 
     padding: 8px 15px; /* Smaller button padding */
   }

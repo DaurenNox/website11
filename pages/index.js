@@ -5,14 +5,11 @@ import "../styles/hero.css";
 import "../styles/about.css";
 import "../styles/expertise.css";
 import "../styles/contact.css";
+import "../styles/globals.css";
 import "../styles/partners.css";
 import "../styles/feedback.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBuilding,
-  faChartLine,
-  faAward,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEye, faBullseye, faTasks } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [language, setLanguage] = useState("ru"); // Default language set to English
@@ -23,12 +20,16 @@ export default function Home() {
   return (
     <div>
       <header>
-        <img src="/logo.png" alt="Logo" width="150" />
+        <Link href="/">
+          <img src="/logo.png" alt="Logo" style={{ cursor: "pointer" }} />
+        </Link>
         <div></div>
         <h1>ЦЕНТР ТОРГОВО-ЭКОНОМИЧЕСКИХ СТРАТЕГИЙ</h1>
         <div className="cta">
-          <span>Email: email@example.com</span>
-          <span>Phone: +123-456-7890</span>
+          <span>АРГИНБАЕВА ГУЛЬЖАН МУХТАРОВНА</span>
+          <span>Директор</span>
+
+          <span>+7 701 761 4684</span>
           <button>Заказать звонок</button>
         </div>
         <select
@@ -45,42 +46,63 @@ export default function Home() {
       <section id="hero">
         <div className="hero-content">
           <h2>«Центр торгово-экономических стратегий»</h2>
-          <p>
-            Providing top-notch trading and economic strategies for success.
-          </p>
+          <p>Независимый аналитический центр. Создан в 2019 году </p>
           <button className="hero-cta">Learn More</button>
         </div>
         <img src="/hero.png" alt="Hero Image" className="hero-bg" />
       </section>
-      <section id="about" className="about-section">
-        <div className="about-section-content">
-          <h2>Про компанию</h2>
-          <div className="about-intro">
-            <p>
-              Основанная в 1998 году, Центр торгово-экономических стратегий
-              имеет миссию обеспечивать наших клиентов наилучшими торговыми и
-              экономическими стратегиями для достижения успеха на глобальном
-              рынке.
-            </p>
+      <section id="about" class="about-section">
+        <div class="about-section-content">
+          <h2>О компании</h2>
+          <div class="mission-vision">
+            <div class="detail">
+              <h3>
+                {" "}
+                <span class="icon">
+                  <FontAwesomeIcon icon={faBullseye} />
+                </span>
+                МИССИЯ
+              </h3>
+              <p>
+                Совершенствование процессов принятия решений.
+                <br />
+                Объективный анализ.
+                <br />
+                Эффективные решения.
+              </p>
+            </div>
+            <div class="detail">
+              <h3>
+                {" "}
+                <span class="icon">
+                  <FontAwesomeIcon icon={faEye} />
+                </span>
+                ВИДЕНИЕ
+              </h3>
+              <p>
+                Независимый институт по выработке стратегических решений в
+                торгово транспортной и экономической политике.
+              </p>
+            </div>
           </div>
-          <div className="about-details">
-            <div className="detail">
-              <span className="icon">
-                <FontAwesomeIcon icon={faBuilding} />
-              </span>
-              <h3>Партнерство с ведущими финансовыми учреждениями</h3>
-            </div>
-            <div className="detail">
-              <span className="icon">
-                <FontAwesomeIcon icon={faChartLine} />
-              </span>
-              <h3>Развитие стратегических планов для более чем 500 компаний</h3>
-            </div>
-            <div className="detail">
-              <span className="icon">
-                <FontAwesomeIcon icon={faAward} />
-              </span>
-              <h3>Награды за инновационные экономические решения</h3>
+          <div class="goals-tasks">
+            <div class="detail large">
+              <h3>
+                {" "}
+                <span class="icon">
+                  <FontAwesomeIcon icon={faTasks} />
+                </span>
+                ЦЕЛИ И ЗАДАЧИ
+              </h3>
+              <p>
+                Проведение комплексных исследований различных отраслях экономики
+                и выработка эффективных рекомендаций для центров принятия
+                решений по актуальным вопросам экономической и торговой
+                политики; <br />
+                Развитие и укрепление взаимосвязи с зарубежными
+                исследовательскими центрами для организации совместных
+                исследований по различным направлениям экономической политики.
+              </p>
             </div>
           </div>
         </div>
@@ -157,7 +179,7 @@ export default function Home() {
       </section>
       <section id="feedback">
         <div className="feedback-container">
-          <h2>Форма обратной связи</h2>
+          <h2>Обратная связь</h2>
           <form className="feedback-form">
             <div className="input-group">
               <label for="name">Ваше имя</label>
@@ -182,13 +204,12 @@ export default function Home() {
       </section>
       <footer id="contacts" className="contact-section">
         <div className="contact-section-content">
-          <div className="contact-card-container">
-            <div className="contact-card-info">
-              <p>Address: Your Address Here</p>
-              <p>Phone: +123 456 7890</p>
-              <p>Email: email@example.com</p>
-            </div>
-            <div className="contact-card-form"></div>
+          <img src="/logo.png" alt="Company Logo" className="footer-logo" />
+          <div className="contact-card-info">
+            <p>АРГИНБАЕВА ГУЛЬЖАН МУХТАРОВНА - Директор</p>
+            <p>Сотовый телефон: +7 701 761 4684</p>
+            <p>Телефон ЦТЭС: +7 7172 64 28 95</p>
+            <p>Электронная почта: ctesfund@gmail.com</p>
           </div>
         </div>
       </footer>

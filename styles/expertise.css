@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+
 #expertise {
-  font-family: "Arial", sans-serif;
   background-color: #f7f7f7;
   padding: 50px 0;
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
 .expertise-section-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 5%;
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
 #expertise h2 {
@@ -16,7 +19,8 @@
   font-weight: 600;
   font-size: 3.2em;
   letter-spacing: 1.2px;
-  color: #002f6c;
+  color: rgb(0, 36, 84); /* Dark Blue */
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
 .expertise-grid {
@@ -31,9 +35,11 @@
   align-items: center;
   padding: 25px;
   border-radius: 50px;
-  background: linear-gradient(145deg, #004a9f, #005ed2);
+  background: rgb(0, 36, 84); /* Dark Blue */
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+
   color: white;
 }
 
@@ -49,6 +55,7 @@
   margin-right: 50px;
   padding-right: 30px;
   border-right: 10px solid rgba(255, 255, 255, 0.7);
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
 .expertise-card ul {
@@ -100,12 +107,9 @@
   }
 
   .expertise-card ul {
-    text-align: center;
-  }
-
-  .expertise-card li::before {
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    list-style-type: none; /* Reinforce no bullet points */
+    padding: 0;
+    margin: 0;
   }
 }
 @media (max-width: 1100px) {

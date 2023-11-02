@@ -1,68 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+
 #about {
   padding: 60px 5%;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Raleway", sans-serif;
 }
 
 .about-section-content {
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
 #about h2 {
   text-align: center;
   margin-bottom: 60px;
-  font-weight: 600;
-  font-size: 3.2em;
+  font-weight: 700; /* Raleway bold */
+  font-size: 3em; /* Adjusted size */
+  font-family: "Raleway", sans-serif;
+
   letter-spacing: 1.2px;
-  color: #002f6c; /* Dark Blue */
+  color: rgb(0, 36, 84); /* Dark Blue */
 }
 
-.about-intro p {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.4em;
-}
-
-.about-details {
+.mission-vision {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-bottom: 40px; /* Spacing between the top and bottom sections */
 }
 
-.icon {
-  display: block; /* Since we're placing them at the top, block works */
-  font-size: 3em; /* Adjust for bigger icons */
-  color: #0051ba;
-  margin-bottom: 20px; /* Spacing between the icon and the text */
-  text-align: center; /* Center the icon */
+.goals-tasks {
+  display: flex;
 }
 
 .detail {
-  display: flex;
-  flex-direction: column; /* Stack icon and text vertically */
-  align-items: center; /* Center content */
-  font-size: 1em;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f4f4f4; /* Light gray background */
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  width: 25%; /* Adjust for equal width */
-  text-align: center; /* Center text */
+  flex: 1; /* Make the details flex items to share the space */
+  padding: 20px; /* Add padding to create space inside the box */
+  margin: 10px; /* Add margin to create space between the boxes */
+  border-radius: 10px; /* Rounded corners for the boxes */
+  background-color: #f9f9f9; /* Light background for the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  align-items: flex-start; /* Align items to the start */
+  text-align: left; /* Align text to the left */
+  display: flex; /* Make sure this is flex to align icon and h3 */
+  font-family: "Raleway", sans-serif;
+
+  flex-direction: column; /* Stack the icon and text vertically */
+}
+.icon {
+  font-size: 1em; /* Adjusted icon size */
+  color: rgb(0, 36, 84); /* Dark Blue */
+  margin-right: 10px; /* Space between icon and h3 */
+}
+.detail h3 {
+  font-weight: 600; /* Raleway semi-bold */
+  font-size: 1.8em; /* Adjusted size */
+  font-family: "Raleway", sans-serif;
+
+  color: rgb(0, 36, 84); /* Dark Blue */
+  margin: 0; /* Remove margin */
+}
+.detail p {
+  color: rgb(0, 36, 84); /* Dark Blue */
+  font-size: 1em; /* Reduced font size */
+  line-height: 2; /* Adjusted line height */
+  margin-top: 10px; /* Space after h3 */
 }
 
-.detail h3 {
-  margin-top: 10px; /* Space between icon and heading */
+.detail.large {
+  flex: 3;
+  flex-direction: column;
+  align-items: center; /* Give the large detail more space */
+  display: flex;
+  /* Additional styles for the large detail if needed */
+}
+
+@media (max-width: 1024px) {
+  #about h2 {
+    font-family: "Raleway", sans-serif;
+
+    font-size: 2.2em; /* Smaller font size for tablets */
+  }
+
+  .detail,
+  .detail.large {
+    font-family: "Raleway", sans-serif;
+
+    /* Adjust padding and margin for smaller screens */
+    padding: 15px;
+    margin: 5px;
+  }
+
+  .icon {
+    font-size: 1.2em; /* Smaller icons on smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
-  .about-details {
-    flex-direction: column;
-    gap: 20px;
+  .mission-vision,
+  .goals-tasks {
+    justify-content: center;
   }
 
   .detail {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%; /* Full width for mobile */
+    margin: 10px 0; /* Only vertical margin */
+  }
+
+  .detail.large {
+    order: -1; /* Move the large detail to the top */
+  }
+
+  .icon {
+    margin-bottom: 5px; /* Space between icon and text for stacked layout */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .detail h3 {
+    font-size: 1.5em; /* Smaller headings for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #about h2 {
+    font-size: 1.8em; /* Even smaller font size for very small devices */
+  }
+
+  .detail p {
+    font-size: 0.8em; /* Smaller text for smaller screens */
   }
 }

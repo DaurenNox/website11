@@ -1,5 +1,4 @@
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
 
 h2 {
   text-align: center;
@@ -7,5 +6,15 @@ h2 {
   font-weight: 600;
   font-size: 1.2em;
   letter-spacing: 1.2px;
-  color: #002f6c; /* Dark Blue */
+  color: rgb(0, 36, 84); /* Dark Blue */
+  font-family: "Raleway", sans-serif;
+}
+
+body,
+h2,
+h3,
+h1,
+span,
+p {
+  font-family: "Raleway", sans-serif;
 }

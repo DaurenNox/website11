@@ -1,18 +1,67 @@
-.contact-section-content {
-  padding: 3px;
-  background-color: #002f6c; /* Blue background */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+
+.contact-section {
+  background-color: rgb(0, 36, 84); /* Dark Blue */
   color: #ffffff; /* White text */
+  padding-left: 10px; /* Consistent padding */
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+}
+
+.contact-section-content {
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+
+  justify-content: start; /* Align items to start */
+  gap: 30px; /* Space between logo and contact info */
+}
+
+.footer-logo {
+  max-height: 100px; /* Adjusted logo size */
+  flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
 .contact-card-info {
-  font-size: 1.2em;
-  text-align: center; /* Centers the text */
-  margin: 0 auto; /* Centers the block */
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.75em; /* Adjust font size for readability */
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+}
+
+@media (max-width: 1024px) {
+  .contact-card-info {
+    font-size: 0.8em; /* Slightly smaller font size for tablet devices */
+  }
 }
 
 @media (max-width: 768px) {
+  .contact-section-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text on small screens */
+    font-family: "Raleway", sans-serif; /* Apply Raleway font */
+
+    gap: 10px; /* Smaller gap for a tighter look */
+  }
+
+  .footer-logo {
+    max-height: 80px; /* Adjust logo size for smaller tablets */
+  }
+
   .contact-card-info {
-    font-size: 1.2em;
-    padding: 20px;
+    font-size: 1em; /* Increase font size for mobile readability */
+    align-items: center; /* Align text items to center */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    max-height: 80px; /* Further reduce logo size for very small screens */
+    margin-top: 10px;
+  }
+
+  .contact-card-info {
+    font-size: 1.1em; /* Slightly larger font size for better readability on very small screens */
+    font-family: "Raleway", sans-serif; /* Apply Raleway font */
   }
 }

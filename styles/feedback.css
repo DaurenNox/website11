@@ -64,6 +64,7 @@ textarea {
   border-radius: 5px;
   font-family: "Raleway", sans-serif; /* Apply Raleway font */
   cursor: pointer;
+  background: white;
   font-size: 1.1em;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -81,6 +82,9 @@ textarea {
 
   h2 {
     font-size: 2.5em; /* Adjusted font size */
+  }
+  .submit-button {
+    background: white;
   }
 }
 
@@ -100,6 +104,7 @@ textarea {
 
   .submit-button {
     font-size: 1em; /* Smaller button font */
+    background: white;
   }
 }
 
@@ -122,6 +127,8 @@ textarea {
   }
 
   .submit-button {
+    background: white;
+
     padding: 8px 15px; /* Smaller button padding */
   }
 }

@@ -17,7 +17,6 @@
   text-align: center;
   margin-bottom: 60px;
   font-weight: 600;
-  font-size: 3.2em;
   letter-spacing: 1.2px;
   color: rgb(0, 36, 84); /* Dark Blue */
   font-family: "Raleway", sans-serif; /* Apply Raleway font */
@@ -51,7 +50,6 @@
 .expertise-card h3 {
   flex: 1;
   font-weight: 600;
-  font-size: 1.8em;
   margin-right: 50px;
   padding-right: 30px;
   border-right: 10px solid rgba(255, 255, 255, 0.7);
@@ -64,7 +62,7 @@
   padding: 0;
   margin: 0;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .expertise-card li {

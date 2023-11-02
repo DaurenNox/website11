@@ -24,8 +24,9 @@
 .contact-card-info {
   flex-direction: column;
   justify-content: center;
-  font-size: 0.75em; /* Adjust font size for readability */
+  font-size: 0.8em; /* Adjust font size for readability */
   font-family: "Raleway", sans-serif; /* Apply Raleway font */
+  line-height: 1;
 }
 
 @media (max-width: 1024px) {

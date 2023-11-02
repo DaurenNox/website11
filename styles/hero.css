@@ -7,7 +7,6 @@ section#hero {
   justify-content: center;
   color: white;
   font-family: "Raleway", sans-serif;
-
   overflow: hidden;
 }
 
@@ -40,7 +39,7 @@ section#hero {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .hero-cta {

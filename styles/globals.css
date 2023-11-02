@@ -8,6 +8,10 @@ h2 {
   letter-spacing: 1.2px;
   color: rgb(0, 36, 84); /* Dark Blue */
   font-family: "Raleway", sans-serif;
+  font-size: 2.5em;
+}
+h1 {
+  font-size: 2em;
 }
 
 body,
@@ -17,4 +21,10 @@ h1,
 span,
 p {
   font-family: "Raleway", sans-serif;
+}
+h3 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 0.5em;
 }

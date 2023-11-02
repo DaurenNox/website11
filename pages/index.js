@@ -28,7 +28,6 @@ export default function Home() {
         <div className="cta">
           <span>АРГИНБАЕВА ГУЛЬЖАН МУХТАРОВНА</span>
           <span>Директор</span>
-
           <span>+7 701 761 4684</span>
           <button>Заказать звонок</button>
         </div>
@@ -47,7 +46,7 @@ export default function Home() {
         <div className="hero-content">
           <h2>«Центр торгово-экономических стратегий»</h2>
           <p>Независимый аналитический центр. Создан в 2019 году </p>
-          <button className="hero-cta">Learn More</button>
+          <button className="hero-cta">Подробнее</button>
         </div>
         <img src="/hero.png" alt="Hero Image" className="hero-bg" />
       </section>
